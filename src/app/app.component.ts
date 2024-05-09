@@ -11,6 +11,9 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   title = 'Angular Testes';
+  id = '';
+  autor = '';
+  musica = '';
 
   private musicService = inject(MusicService);
 
@@ -23,4 +26,18 @@ export class AppComponent {
   obterMusicasCadastradas(){
     this.musicas$ = this.musicService.obterMusicas();
   }
+
+  cadastrarMusica(){
+    if (!this.autor || !this.musica) {
+      return;
+    }
+
+    this.musicService.cadastrarMusica(
+      {
+        author: this.autor,
+        text: this.musica
+      })
+      .subscribe(() => this.obterMusicasCadastradas());
+  }
+
 }

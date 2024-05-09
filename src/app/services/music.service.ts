@@ -8,9 +8,13 @@ import { Music } from "../models/music.model";
 })
 export class MusicService{
   private htthClient = inject(HttpClient);
-  private url = environment.urlApi;
+  private url = `${environment.urlApi}musics`;
 
   obterMusicas(){
-    return this.htthClient.get<Music[]>(this.url + 'musics');
+    return this.htthClient.get<Music[]>(this.url);
+  }
+
+  cadastrarMusica(musica: Music){
+    return this.htthClient.post<Music>(this.url, musica);
   }
 }
