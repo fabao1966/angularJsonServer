@@ -1,2 +1,44 @@
-<h1>Angular</h1>
 <app-formulario></app-formulario>
+
+<div class="container">
+  <form>
+    <div>
+      <label>Id</label>
+      <input type="text" disabled  name="id">
+    </div>
+
+    <div>
+      <label>Author</label>
+      <input type="text"  name="autor">
+    </div>
+
+    <div>
+      <label>Musica</label>
+      <input type="text" name="musica">
+    </div>
+
+    <button>  Criar   </button>
+  </form>
+
+  <table>
+    <thead>
+      <th> Id </th>
+      <th> Author </th>
+      <th> Musica </th>
+      <th> ... </th>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let musica of musicas$|async">
+        <td> {{ musica.id }} </td>
+        <td> Author  {{ musica.author }} </td>
+        <td>  {{ musica.text }} </td>
+        <td>
+          <span > alterar </span>
+          <span  > remover </span>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

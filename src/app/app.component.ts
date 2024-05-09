@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { environment } from '../environments/environment.development';
+import { Music } from './models/music.model';
+import { MusicService } from './services/music.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,17 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angulartestes';
+  title = 'Angular Testes';
+
+  private musicService = inject(MusicService);
+
+  musicas$ = new Observable<Music[]>();
+
+  constructor(){
+    this. obterMusicasCadastradas();
+  }
+
+  obterMusicasCadastradas(){
+    this.musicas$ = this.musicService.obterMusicas();
+  }
 }
