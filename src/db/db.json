@@ -1,11 +1,6 @@
 {
   "musics": [
     {
-      "id": "1",
-      "author": "Guns N' Roses",
-      "text": "Civil War"
-    },
-    {
       "id": "3",
       "author": "Led Zeppelin",
       "text": "Whole Lotta Love"
@@ -24,6 +19,16 @@
       "author": "Guns N Roses",
       "text": "November Rain",
       "id": "7"
+    },
+    {
+      "id": "1147",
+      "author": "michael jackson",
+      "text": "smooth criminal"
+    },
+    {
+      "id": "8850",
+      "author": "Marvin Gaye",
+      "text": "Let's Get It On"
     }
   ]
 }
