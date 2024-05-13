@@ -8,7 +8,7 @@
     {
       "id": "2",
       "author": "AC/DC",
-      "text": "Highway to Hell"
+      "text": "Highway-to-Hell"
     },
     {
       "id": "3",
@@ -39,6 +39,11 @@
       "id": "77dc",
       "author": "Billy Paul",
       "text": "Me and Mrs Jones"
+    },
+    {
+      "id": "b046",
+      "author": "AC/DC",
+      "text": "Highway-to-Hell"
     }
   ]
 }

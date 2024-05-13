@@ -27,9 +27,13 @@ export class AppComponent {
     this.musicas$ = this.musicService.obterMusicas();
   }
 
-  cadastrarMusica(){
+  buttonClick(){
     if (!this.autor || !this.musica) {
       return;
+    }
+
+    if (this.id) {//se tem algo no id é feita a atualização
+      this.atualizarMusica();
     }
 
     this.musicService.cadastrarMusica(
@@ -39,5 +43,22 @@ export class AppComponent {
       })
       .subscribe(() => this.obterMusicasCadastradas());
   }
+
+  atualizarMusica(){
+    this.musicService.editarMusica({
+      id: parseInt(this.id),
+      author: this.autor,
+      text: this.musica})
+      .subscribe(() => this.obterMusicasCadastradas());
+  }
+
+  preencherCampos(musica: Music){
+
+    this.id = musica.id!.toString();
+    this.autor = musica.author;
+    this.musica = musica.text;
+
+  }
+
 
 }

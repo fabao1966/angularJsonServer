@@ -17,4 +17,8 @@ export class MusicService{
   cadastrarMusica(musica: Music){
     return this.htthClient.post<Music>(this.url, musica);
   }
+
+  editarMusica(musica: Music){
+    return this.htthClient.put<Music>(`${this.url}/${musica.id}`, musica);
+  }
 }
