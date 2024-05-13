@@ -6,11 +6,6 @@
       "text": "Civil War"
     },
     {
-      "id": "2",
-      "author": "AC/DC",
-      "text": "Highway-to-Hell"
-    },
-    {
       "id": "3",
       "author": "Led Zeppelin",
       "text": "Whole Lotta Love"
@@ -29,21 +24,6 @@
       "author": "Guns N Roses",
       "text": "November Rain",
       "id": "7"
-    },
-    {
-      "id": "4dca",
-      "author": "Guns N Roses",
-      "text": "BreakDown"
-    },
-    {
-      "id": "77dc",
-      "author": "Billy Paul",
-      "text": "Me and Mrs Jones"
-    },
-    {
-      "id": "b046",
-      "author": "AC/DC",
-      "text": "Highway-to-Hell"
     }
   ]
 }

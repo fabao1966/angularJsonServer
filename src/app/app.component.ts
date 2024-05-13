@@ -60,5 +60,10 @@ export class AppComponent {
 
   }
 
+  remover(id: number){
+    this.musicService.removerMusica(id)
+    .subscribe(() => this.obterMusicasCadastradas());
+  }
+
 
 }

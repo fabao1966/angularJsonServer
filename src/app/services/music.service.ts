@@ -21,4 +21,8 @@ export class MusicService{
   editarMusica(musica: Music){
     return this.htthClient.put<Music>(`${this.url}/${musica.id}`, musica);
   }
+
+  removerMusica(id:number){
+    return this.htthClient.delete<void>(`${this.url}/${id}`);
+  }
 }

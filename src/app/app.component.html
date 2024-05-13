@@ -33,7 +33,7 @@
         <td>  {{ musica.text }} </td>
         <td>
           <span (click)="preencherCampos(musica)" > alterar </span>
-          <span  > remover </span>
+          <span (click)="remover(musica.id!)"> remover </span>
         </td>
       </tr>
 
